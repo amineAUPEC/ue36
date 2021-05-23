@@ -91,9 +91,9 @@ git push origin master
         ```
 
 - commit et push :
-`git pull`
-`git commit -a`
-`git push`
+`git pull`  
+`git commit -a`  
+`git push`  
 ***OR***
 *Il est souvent recommandé de faire git add . pour ajouter les fichiers*
 `git add .`

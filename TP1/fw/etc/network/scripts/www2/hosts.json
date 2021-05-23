@@ -1,0 +1,5 @@
+{
+    "type": "file",
+    "source": "/home/etudiant/repo/www2/etc/hosts",
+    "destination": "/etc/hosts"
+}
