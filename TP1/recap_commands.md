@@ -100,14 +100,22 @@ git push origin master
 `git commit -m "fw_init_partie3_1"`
 `git push`
 
-
+- recommencez :
+- Si fw :
+`sudo VboxManage unregistervm fw --delete`
+`sudo rm -rf fw/output-virtualbox-ovf/`
 
 
 - Configuration en adressage persistant des cartes-réseaux
 > [!WARNING]
 > Ici copier ce fichier vers le dossier app
 `cp interfaces /home/etudiant/app/fw/etc/network/`
-
+*Son contenu*:
+```bash
+auto eth0
+iface eth0 inet static
+    address /24
+```
 ```json
     {
          "type": "file",
@@ -344,3 +352,32 @@ git push origin master
         packer validate ./scripts/log/paquetages.json
         packer build ./scripts/log/paquetages.json
         ```
+
+
+## synth1 fin :
+
+- activer le routage sur fw :
+- copie du fichier en local :
+cp fw 
+*Son contenu* :
+```bash
+sed -E -i.SAVE \
+'s/^net.ipv4.ip_forward/#net.ipv4.ip_forward/' \
+/etc/sysctl.conf
+```
+- copie du script (fichier) sur la VM dans /root
+```json
+    {
+        "type": "file",
+        "source": "/home/etudiant/app/fw/routing.sh ",
+        "destination": "/root/routing.sh"
+    }
+
+```
+- Exécution du script :
+```json
+    {
+        "type": "shell",
+        "inline": ["cd /root && chmod +x routing.sh && ./routing.sh"]
+    }
+```
