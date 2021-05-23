@@ -129,7 +129,7 @@ git push origin master
         ```json
             {
                 "type": "shell",
-                "inline": ["sudo hostnamectl set-hostname fw "]
+                "inline": ["hostnamectl set-hostname fw "]
             }
         ```
 
@@ -145,6 +145,6 @@ git push origin master
             ```json
             {
                 "type": "shell",
-                "inline": ["reboot "]
+                "inline": ["reboot"]
             }
         ```
