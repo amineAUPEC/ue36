@@ -104,3 +104,47 @@ git push origin master
 
 
 - Configuration en adressage persistant des cartes-réseaux
+> [!WARNING]
+> Ici copier ce fichier vers le dossier app
+`cp interfaces /home/etudiant/app/fw/etc/network/`
+
+```json
+    {
+         "type": "file",
+         "source": "/home/etudiant/app/fw/etc/network/interfaces",
+         "destination": "/etc/network/interfaces"
+    }
+```
+
+- ajouter à git :
+```bash
+cd ..
+git add fw/etc/network/interfaces
+git commit fw/etc/network/interfaces <<< "Fichier_interfaces_fw"
+git push origin master
+```
+
+- renommer la VM
+    - 1ère étape : édit avec hostnamectl
+        ```json
+            {
+                "type": "shell",
+                "inline": ["sudo hostnamectl set-hostname fw "]
+            }
+        ```
+
+    - 2ème étape : remplacement du fichier /etc/hosts
+        ```json
+                {
+                 "type": "file",
+                 "source": "/home/etudiant/repo/fw/etc/hosts",
+                 "destination": "/etc/hosts "
+                }
+        ```
+    - 3 ème étape : reboot    
+            ```json
+            {
+                "type": "shell",
+                "inline": ["reboot "]
+            }
+        ```
