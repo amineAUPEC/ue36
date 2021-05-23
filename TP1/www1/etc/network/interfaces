@@ -1,0 +1,7 @@
+# www1
+iface eth0 inet static
+    address 203.0.113.2/24
+
+# www1
+iface eth1 inet static
+    address 192.0.2.1/24

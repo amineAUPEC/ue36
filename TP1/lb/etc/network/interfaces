@@ -1,0 +1,7 @@
+#lb
+iface eth0 inet static
+    address 198.51.100.2/24
+
+#lb
+iface eth1 inet static
+    address 203.0.113.1/24

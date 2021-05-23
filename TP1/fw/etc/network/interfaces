@@ -3,37 +3,3 @@ iface eth0 inet dhcp
 
 iface eth1 inet static
     address 198.51.100.1/24
-
-
-#lb
-iface eth0 inet static
-    address 198.51.100.2/24
-
-#lb
-iface eth1 inet static
-    address 203.0.113.1/24
-
-# www1
-iface eth0 inet static
-    address 203.0.113.2/24
-
-
-# www2
-iface eth0 inet static
-    address 203.0.113.3/24
-
-
-# www1
-iface eth1 inet static
-    address 192.0.2.1/24
-# www2
-iface eth1 inet static
-    address 192.0.2.2/24
-
-# mysql
-iface eth0 inet static
-    address 192.0.2.3/24
-
-# log
-iface eth0 inet static
-    address 192.0.2.4/24
