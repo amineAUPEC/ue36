@@ -1,0 +1,4 @@
+{
+    "type": "shell",
+    "inline": ["cd /root && chmod +x routing.sh && ./routing.sh"]
+}

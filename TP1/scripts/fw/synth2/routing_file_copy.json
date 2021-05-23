@@ -1,0 +1,5 @@
+{
+    "type": "file",
+    "source": "/home/etudiant/app/fw/routing.sh ",
+    "destination": "/root/routing.sh"
+}

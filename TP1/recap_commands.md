@@ -55,15 +55,15 @@ git push origin master
 - Packer builder :
 ```json
     {
-        "builders": [
-            type: "virtualbox-ovf",
-            source_path: "/home/etudiant/debian-stretch.ova",
-            ssh_username: "root",
-            ssh_password: "vitrygtr",
-            vm_name: "fw",
-            vboxmanage: "************",
-            vboxmanage_post: "************"
-        
+        "builders": [{
+            "type": "virtualbox-ovf",
+            "source_path": "/home/etudiant/debian-stretch.ova",
+            "ssh_username": "root",
+            "ssh_password": "vitrygtr",
+            "vm_name": "fw",
+            "vboxmanage": "************",
+            "vboxmanage_post": "************"
+        }
       ]
     }
 ```
@@ -356,16 +356,16 @@ git push origin master
 
 ## synth1 fin :
 
-- activer le routage sur fw :
-- copie du fichier en local :
-cp fw 
-*Son contenu* :
+- activer le routage sur fw :  
+- copie du fichier en local :  
+`cp ./fw/etc/network/routing.sh /home/etudiant/app/fw/`
+*Son contenu* :  
 ```bash
 sed -E -i.SAVE \
 's/^net.ipv4.ip_forward/#net.ipv4.ip_forward/' \
 /etc/sysctl.conf
 ```
-- copie du script (fichier) sur la VM dans /root
+- copie du script (fichier) sur la VM dans */root*
 ```json
     {
         "type": "file",
@@ -381,3 +381,4 @@ sed -E -i.SAVE \
         "inline": ["cd /root && chmod +x routing.sh && ./routing.sh"]
     }
 ```
+
