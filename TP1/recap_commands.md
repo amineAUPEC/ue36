@@ -7,9 +7,9 @@
 
 - Cloner le depot :
 
-`git clone $ip:app.git`
-`cd app`
-`cat exemple/*`
+`git clone $ip:app.git`  
+`cd app`  
+`cat exemple/*`  
 
 `cd fw`
 
