@@ -1,0 +1,12 @@
+{
+    "builders": [{
+        "type": "virtualbox-ovf",
+        "source_path": "/home/etudiant/debian-stretch.ova",
+        "ssh_username": "root",
+        "ssh_password": "vitrygtr",
+        "vm_name": "fw",
+        "vboxmanage": "************",
+        "vboxmanage_post": "************"
+    }
+  ]
+}
