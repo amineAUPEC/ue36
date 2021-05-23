@@ -129,22 +129,30 @@ git push origin master
         ```json
             {
                 "type": "shell",
-                "inline": ["hostnamectl set-hostname fw "]
+                "inline": ["hostnamectl set-hostname fw"]
             }
         ```
 
     - 2ème étape : remplacement du fichier /etc/hosts
         ```json
                 {
-                 "type": "file",
-                 "source": "/home/etudiant/repo/fw/etc/hosts",
-                 "destination": "/etc/hosts "
+                    "type": "file",
+                    "source": "/home/etudiant/repo/fw/etc/hosts",
+                    "destination": "/etc/hosts"
                 }
         ```
     - 3 ème étape : reboot    
             ```json
-            {
-                "type": "shell",
-                "inline": ["reboot"]
-            }
-        ```
+                {
+                    "type": "shell",
+                    "inline": ["reboot"]
+                }
+            ```
+
+- Installation des paquets :
+```json
+    {
+        "type": "shell",
+        "inline": ["sudo apt-get update –y && sudo apt-get install –y tcpdump"]
+    }
+```
