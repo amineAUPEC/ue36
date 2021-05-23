@@ -116,7 +116,7 @@ git push origin master
     }
 ```
 
-- ajouter à git :
+- Ajouter à git :
 ```bash
 cd ..
 git add fw/etc/network/interfaces
@@ -124,8 +124,8 @@ git commit fw/etc/network/interfaces <<< "Fichier_interfaces_fw"
 git push origin master
 ```
 
-- renommer la VM
-    - 1ère étape : édit avec hostnamectl
+- Renommer la VM
+    - 1ère étape : Édit avec hostnamectl
         ```json
             {
                 "type": "shell",
@@ -133,7 +133,7 @@ git push origin master
             }
         ```
 
-    - 2ème étape : remplacement du fichier /etc/hosts
+    - 2ème étape : Remplacement du fichier /etc/hosts
         ```json
                 {
                     "type": "file",
@@ -142,17 +142,60 @@ git push origin master
                 }
         ```
     - 3 ème étape : reboot    
-            ```json
-                {
-                    "type": "shell",
-                    "inline": ["reboot"]
-                }
-            ```
-
+        ```json
+            {
+                "type": "shell",
+                "inline": ["reboot"]
+            }
+        ```
 - Installation des paquets :
-```json
-    {
-        "type": "shell",
-        "inline": ["sudo apt-get update –y && sudo apt-get install –y tcpdump"]
-    }
-```
+- Si fw :
+    ```json
+        {
+            "type": "shell",
+            "inline": ["apt-get update –y && apt-get install –y tcpdump"]
+        }
+    ```
+- Si lb :
+    ```json
+        {
+            "type": "shell",
+            "inline": ["apt-get update –y && apt-get install –y haproxy"]
+        }
+    ```
+- Si www1 :  
+    ```json
+        {
+            "type": "shell",
+            "inline": ["apt-get update –y && apt-get install –y apache2"]
+        }
+    ```
+- Si www2 :  
+    ```json
+        {
+            "type": "shell",
+            "inline": ["apt-get update –y && apt-get install –y php7-0 php7.0-mysql"]
+        }
+    ```
+- Si mysql :  
+    ```json
+        {
+            "type": "shell",
+            "inline": ["apt-get update –y && apt-get install –y mysql-server"]
+        }
+    ```
+- Si log :  
+    ```json
+        {
+            "type": "shell",
+            "inline": ["apt-get update –y && apt-get install –y beep"]
+        }
+    ```
+
+- Construire une VM
+    -  Démo avec fw.json
+
+        ```bash
+        packer validate fw/fw.json
+        packer build fw/fw.json
+        ```
