@@ -199,3 +199,173 @@ git push origin master
         packer validate fw/fw.json
         packer build fw/fw.json
         ```
+
+        ```bash
+        packer validate ./scripts/provisionner_ip_whoami.json
+        packer build ./scripts/provisionner_ip_whoami.json        
+
+        packer validate ./scripts/fw/hostnamectl.json
+        packer build ./scripts/fw/hostnamectl.json
+
+
+        packer validate ./scripts/fw/hosts.json
+        packer build ./scripts/fw/hosts.json
+
+        packer validate ./scripts/fw/reboot.json
+        packer build ./scripts/fw/reboot.json
+
+
+        packer validate ./scripts/fw/paquetages.json
+        packer build ./scripts/fw/paquetages.json
+        ```    
+
+    -  Démo avec fw.json
+
+        ```bash
+        packer validate fw/fw.json
+        packer build fw/fw.json
+        ```
+
+        ```bash
+        packer validate ./scripts/provisionner_ip_whoami.json
+        packer build ./scripts/provisionner_ip_whoami.json        
+
+        packer validate ./scripts/fw/hostnamectl.json
+        packer build ./scripts/fw/hostnamectl.json
+
+
+        packer validate ./scripts/fw/hosts.json
+        packer build ./scripts/fw/hosts.json
+
+        packer validate ./scripts/fw/reboot.json
+        packer build ./scripts/fw/reboot.json
+
+
+        packer validate ./scripts/fw/paquetages.json
+        packer build ./scripts/fw/paquetages.json
+        ```
+    -  Démo avec fw.json
+
+        ```bash
+        packer validate fw/fw.json
+        packer build fw/fw.json
+        ```
+
+        ```bash
+        packer validate ./scripts/provisionner_ip_whoami.json
+        packer build ./scripts/provisionner_ip_whoami.json        
+
+        packer validate ./scripts/fw/hostnamectl.json
+        packer build ./scripts/fw/hostnamectl.json
+
+
+        packer validate ./scripts/fw/hosts.json
+        packer build ./scripts/fw/hosts.json
+
+        packer validate ./scripts/fw/reboot.json
+        packer build ./scripts/fw/reboot.json
+
+
+        packer validate ./scripts/fw/paquetages.json
+        packer build ./scripts/fw/paquetages.json
+        ```
+    -  Démo avec fw.json
+
+        ```bash
+        packer validate fw/fw.json
+        packer build fw/fw.json
+        ```
+
+        ```bash
+        packer validate ./scripts/provisionner_ip_whoami.json
+        packer build ./scripts/provisionner_ip_whoami.json        
+
+        packer validate ./scripts/fw/hostnamectl.json
+        packer build ./scripts/fw/hostnamectl.json
+
+
+        packer validate ./scripts/fw/hosts.json
+        packer build ./scripts/fw/hosts.json
+
+        packer validate ./scripts/fw/reboot.json
+        packer build ./scripts/fw/reboot.json
+
+
+        packer validate ./scripts/fw/paquetages.json
+        packer build ./scripts/fw/paquetages.json
+        ```
+    -  Démo avec fw.json
+
+        ```bash
+        packer validate fw/fw.json
+        packer build fw/fw.json
+        ```
+
+        ```bash
+        packer validate ./scripts/provisionner_ip_whoami.json
+        packer build ./scripts/provisionner_ip_whoami.json        
+
+        packer validate ./scripts/fw/hostnamectl.json
+        packer build ./scripts/fw/hostnamectl.json
+
+
+        packer validate ./scripts/fw/hosts.json
+        packer build ./scripts/fw/hosts.json
+
+        packer validate ./scripts/fw/reboot.json
+        packer build ./scripts/fw/reboot.json
+
+
+        packer validate ./scripts/fw/paquetages.json
+        packer build ./scripts/fw/paquetages.json
+        ```
+    -  Démo avec fw.json
+
+        ```bash
+        packer validate fw/fw.json
+        packer build fw/fw.json
+        ```
+
+        ```bash
+        packer validate ./scripts/provisionner_ip_whoami.json
+        packer build ./scripts/provisionner_ip_whoami.json        
+
+        packer validate ./scripts/fw/hostnamectl.json
+        packer build ./scripts/fw/hostnamectl.json
+
+
+        packer validate ./scripts/fw/hosts.json
+        packer build ./scripts/fw/hosts.json
+
+        packer validate ./scripts/fw/reboot.json
+        packer build ./scripts/fw/reboot.json
+
+
+        packer validate ./scripts/fw/paquetages.json
+        packer build ./scripts/fw/paquetages.json
+        ```
+    -  Démo avec fw.json
+
+        ```bash
+        packer validate fw/fw.json
+        packer build fw/fw.json
+        ```
+
+        ```bash
+        packer validate ./scripts/provisionner_ip_whoami.json
+        packer build ./scripts/provisionner_ip_whoami.json        
+
+        packer validate ./scripts/fw/hostnamectl.json
+        packer build ./scripts/fw/hostnamectl.json
+
+
+        packer validate ./scripts/fw/hosts.json
+        packer build ./scripts/fw/hosts.json
+
+        packer validate ./scripts/fw/reboot.json
+        packer build ./scripts/fw/reboot.json
+
+
+        packer validate ./scripts/fw/paquetages.json
+        packer build ./scripts/fw/paquetages.json
+        ```
