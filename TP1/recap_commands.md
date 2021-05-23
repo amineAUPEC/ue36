@@ -219,153 +219,128 @@ git push origin master
         packer build ./scripts/fw/paquetages.json
         ```    
 
-    -  Démo avec fw.json
+    -  Démo avec lb.json
 
         ```bash
-        packer validate fw/fw.json
-        packer build fw/fw.json
+        packer validate lb/lb.json
+        packer build lb/lb.json
         ```
 
         ```bash
         packer validate ./scripts/provisionner_ip_whoami.json
         packer build ./scripts/provisionner_ip_whoami.json        
 
-        packer validate ./scripts/fw/hostnamectl.json
-        packer build ./scripts/fw/hostnamectl.json
+        packer validate ./scripts/lb/hostnamectl.json
+        packer build ./scripts/lb/hostnamectl.json
 
 
-        packer validate ./scripts/fw/hosts.json
-        packer build ./scripts/fw/hosts.json
+        packer validate ./scripts/lb/hosts.json
+        packer build ./scripts/lb/hosts.json
 
-        packer validate ./scripts/fw/reboot.json
-        packer build ./scripts/fw/reboot.json
+        packer validate ./scripts/lb/reboot.json
+        packer build ./scripts/lb/reboot.json
 
 
-        packer validate ./scripts/fw/paquetages.json
-        packer build ./scripts/fw/paquetages.json
+        packer validate ./scripts/lb/paquetages.json
+        packer build ./scripts/lb/paquetages.json
         ```
-    -  Démo avec fw.json
+    -  Démo avec www1.json
 
         ```bash
-        packer validate fw/fw.json
-        packer build fw/fw.json
-        ```
-
-        ```bash
-        packer validate ./scripts/provisionner_ip_whoami.json
-        packer build ./scripts/provisionner_ip_whoami.json        
-
-        packer validate ./scripts/fw/hostnamectl.json
-        packer build ./scripts/fw/hostnamectl.json
-
-
-        packer validate ./scripts/fw/hosts.json
-        packer build ./scripts/fw/hosts.json
-
-        packer validate ./scripts/fw/reboot.json
-        packer build ./scripts/fw/reboot.json
-
-
-        packer validate ./scripts/fw/paquetages.json
-        packer build ./scripts/fw/paquetages.json
-        ```
-    -  Démo avec fw.json
-
-        ```bash
-        packer validate fw/fw.json
-        packer build fw/fw.json
+        packer validate www1/www1.json
+        packer build www1/www1.json
         ```
 
         ```bash
         packer validate ./scripts/provisionner_ip_whoami.json
         packer build ./scripts/provisionner_ip_whoami.json        
 
-        packer validate ./scripts/fw/hostnamectl.json
-        packer build ./scripts/fw/hostnamectl.json
+        packer validate ./scripts/www1/hostnamectl.json
+        packer build ./scripts/www1/hostnamectl.json
 
 
-        packer validate ./scripts/fw/hosts.json
-        packer build ./scripts/fw/hosts.json
+        packer validate ./scripts/www1/hosts.json
+        packer build ./scripts/www1/hosts.json
 
-        packer validate ./scripts/fw/reboot.json
-        packer build ./scripts/fw/reboot.json
+        packer validate ./scripts/www1/reboot.json
+        packer build ./scripts/www1/reboot.json
 
 
-        packer validate ./scripts/fw/paquetages.json
-        packer build ./scripts/fw/paquetages.json
+        packer validate ./scripts/www1/paquetages.json
+        packer build ./scripts/www1/paquetages.json
         ```
-    -  Démo avec fw.json
+    -  Démo avec www2.json
 
         ```bash
-        packer validate fw/fw.json
-        packer build fw/fw.json
-        ```
-
-        ```bash
-        packer validate ./scripts/provisionner_ip_whoami.json
-        packer build ./scripts/provisionner_ip_whoami.json        
-
-        packer validate ./scripts/fw/hostnamectl.json
-        packer build ./scripts/fw/hostnamectl.json
-
-
-        packer validate ./scripts/fw/hosts.json
-        packer build ./scripts/fw/hosts.json
-
-        packer validate ./scripts/fw/reboot.json
-        packer build ./scripts/fw/reboot.json
-
-
-        packer validate ./scripts/fw/paquetages.json
-        packer build ./scripts/fw/paquetages.json
-        ```
-    -  Démo avec fw.json
-
-        ```bash
-        packer validate fw/fw.json
-        packer build fw/fw.json
+        packer validate www2/www2.json
+        packer build www2/www2.json
         ```
 
         ```bash
         packer validate ./scripts/provisionner_ip_whoami.json
         packer build ./scripts/provisionner_ip_whoami.json        
 
-        packer validate ./scripts/fw/hostnamectl.json
-        packer build ./scripts/fw/hostnamectl.json
+        packer validate ./scripts/www2/hostnamectl.json
+        packer build ./scripts/www2/hostnamectl.json
 
 
-        packer validate ./scripts/fw/hosts.json
-        packer build ./scripts/fw/hosts.json
+        packer validate ./scripts/www2/hosts.json
+        packer build ./scripts/www2/hosts.json
 
-        packer validate ./scripts/fw/reboot.json
-        packer build ./scripts/fw/reboot.json
+        packer validate ./scripts/www2/reboot.json
+        packer build ./scripts/www2/reboot.json
 
 
-        packer validate ./scripts/fw/paquetages.json
-        packer build ./scripts/fw/paquetages.json
+        packer validate ./scripts/www2/paquetages.json
+        packer build ./scripts/www2/paquetages.json
         ```
-    -  Démo avec fw.json
+    -  Démo avec mysql.json
 
         ```bash
-        packer validate fw/fw.json
-        packer build fw/fw.json
+        packer validate mysql/mysql.json
+        packer build mysql/mysql.json
         ```
 
         ```bash
         packer validate ./scripts/provisionner_ip_whoami.json
         packer build ./scripts/provisionner_ip_whoami.json        
 
-        packer validate ./scripts/fw/hostnamectl.json
-        packer build ./scripts/fw/hostnamectl.json
+        packer validate ./scripts/mysql/hostnamectl.json
+        packer build ./scripts/mysql/hostnamectl.json
 
 
-        packer validate ./scripts/fw/hosts.json
-        packer build ./scripts/fw/hosts.json
+        packer validate ./scripts/mysql/hosts.json
+        packer build ./scripts/mysql/hosts.json
 
-        packer validate ./scripts/fw/reboot.json
-        packer build ./scripts/fw/reboot.json
+        packer validate ./scripts/mysql/reboot.json
+        packer build ./scripts/mysql/reboot.json
 
 
-        packer validate ./scripts/fw/paquetages.json
-        packer build ./scripts/fw/paquetages.json
+        packer validate ./scripts/mysql/paquetages.json
+        packer build ./scripts/mysql/paquetages.json
+        ```
+    -  Démo avec log.json
+
+        ```bash
+        packer validate log/log.json
+        packer build log/log.json
+        ```
+
+        ```bash
+        packer validate ./scripts/provisionner_ip_whoami.json
+        packer build ./scripts/provisionner_ip_whoami.json        
+
+        packer validate ./scripts/log/hostnamectl.json
+        packer build ./scripts/log/hostnamectl.json
+
+
+        packer validate ./scripts/log/hosts.json
+        packer build ./scripts/log/hosts.json
+
+        packer validate ./scripts/log/reboot.json
+        packer build ./scripts/log/reboot.json
+
+
+        packer validate ./scripts/log/paquetages.json
+        packer build ./scripts/log/paquetages.json
         ```
