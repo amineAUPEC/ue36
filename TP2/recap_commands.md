@@ -138,4 +138,60 @@ sudo chmod -R 755 /var/www/your_domain
 
 
 
+- Installer CLI AWS :
+`sudo apt-get update -y && apt-get install python3 python python3-pip`  
+`sudo pip install awscli`
+`sudo pip3 install awscli`
 
+
+- configurer la connexion au compte aws :
+- Consulter la documentation d'Amazon :  
+[docsaws](https://docs.aws.amazon.com/fr_fr/cli/latest/userguide/cli-services-ec2-instances.html)  
+
+- Commandes aws ec2 usuelles :
+    - `run-instances`
+    - `terminate-instances`
+    - `describe-instances`
+    
+- Configuration du firewall AWS en CLI :
+
+```bash
+# Renvoie l'identifiant du security group (sg-*)
+# associé à l'instance (dont l'identifiant 
+# est $INSTANCE_ID) 
+aws ec2 describe-instance-attribute \
+--instance-id $INSTANCE_ID \
+--attribute groupSet
+# Ajoute une règle dans le security group $SG_ID
+# pour autoriser les connexions TCP sur le port 4242 
+# de l'instance, depuis n'importe où. 
+aws ec2 authorize-security-group-ingress \
+--group-id $SG_ID \
+--protocol tcp --port 4242 --cidr 0.0.0.0/0
+```
+
+Voir l'historique des commandes depuis l'interface aws et exécuté les commandes ou alors history puis exécuter les commandes
+## synth2 fin :
+
+
+[aws_credentials](https://www.packer.io/docs/builders/amazon.html#specifying-amazon-credentials)
+./docs/ec2_modified.json  
+son contenu :
+```json
+{
+    "builders": [
+    {
+        "type": "amazon-ebs",
+        "region": "us-east-1",
+        "source_ami": "ami-fce3c696",
+        "instance_type": "t2.micro",
+        "ssh_username": "ubuntu",
+        "ami_name": "Ta meilleure AMI",
+        "access_key": "AKIAIOSFODNN7EXAMPLE",
+        "secret_key": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+
+    }
+    ]
+}
+```
+## synth3 fin :
