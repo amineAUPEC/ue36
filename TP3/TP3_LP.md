@@ -6,4 +6,4 @@
 
 
 
-root vitrygtr
+root vitrygtr -> credential for Proxmox
