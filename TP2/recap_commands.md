@@ -128,11 +128,11 @@ SSLStaplingCache "shmcb:logs/stapling-cache(150000)"
 # Requires Apache >= 2.4.11
 SSLSessionTickets Off
 EOF
-```
 exit
+```
 
-`sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak`
-`sudo nano /etc/apache2/sites-available/default-ssl.conf`
+`sudo cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.bak`  
+`sudo nano /etc/apache2/sites-available/default-ssl.conf`  
 
 > 
     <IfModule mod_ssl.c>
@@ -161,9 +161,9 @@ exit
     </IfModule>
 
 
-`sudo nano /etc/apache2/sites-available/000-default.conf`
+`sudo nano /etc/apache2/sites-available/000-default.conf` 
 >
-Redirect permanent "/" "https://your_domain_or_IP/"
+    Redirect permanent "/" "https://your_domain_or_IP/"
 
 
 ```bash
