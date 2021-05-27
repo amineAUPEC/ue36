@@ -308,11 +308,13 @@ kill privileges
 
 - Installer CLI AWS :
 `sudo apt-get update -y && sudo apt-get install python3 python python3-pip -y`    
-`sudo pip install awscli`  
+<!-- `sudo pip install awscli`   -->
 `sudo pip3 install awscli`  
 
 
 - Configurer la connexion au compte AWS :
+    - create aws folder 
+    `mkdir ~/.aws/`
     - Copy and paste the following into `nano ~/.aws/credentials`
     - Overwrite this file `~/.aws/config` with this   
         ```bash
@@ -321,7 +323,11 @@ kill privileges
         region=us-east-1
         EOF
         ```
-        
+    - verify :
+    ```bash
+    sudo cat ~/.aws/credentials    
+    sudo cat ~/.aws/config
+    ```
 
 - Consulter la documentation d'Amazon :  
 [docsaws](https://docs.aws.amazon.com/fr_fr/cli/latest/userguide/cli-services-ec2-instances.html)  
