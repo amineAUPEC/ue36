@@ -307,7 +307,7 @@ kill privileges
 
 
 - Installer CLI AWS :
-`sudo apt-get update -y && apt-get install python3 python python3-pip`    
+`sudo apt-get update -y && sudo apt-get install python3 python python3-pip -y`    
 `sudo pip install awscli`  
 `sudo pip3 install awscli`  
 
