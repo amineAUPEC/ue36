@@ -105,7 +105,8 @@ Paris
 Paris
 AugustinCorp Inc
 AugustinCorp
-54.235.8.226 
+# 54.235.8.226 
+54.167.179.185
 zemail@u-pec.fr
 EOF
 exit
@@ -140,6 +141,7 @@ exit
             <VirtualHost _default_:443>
                     ServerAdmin your_email@example.com
                     ServerName server_domain_or_IP
+                    ServerName 54.167.179.185
     
                     DocumentRoot /var/www/html
     
@@ -165,9 +167,9 @@ exit
 `sudo nano /etc/apache2/sites-available/000-default.conf` 
 >
     Redirect permanent "/" "https://your_domain_or_IP/"
-    Redirect permanent "/" "https://54.235.8.226/"
-
-54.235.8.226
+    Redirect permanent "/" "https://54.167.179.185/"
+54.167.179.185
+<!-- 54.235.8.226 -->
 ```bash
 sudo a2enmod ssl
 sudo a2enmod headers
@@ -199,7 +201,8 @@ sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-x
 
 
 `sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP`  
-`sudo apache2ctl -t -D DUMP_VHOSTS | grep 54.235.8.226`  
+`sudo apache2ctl -t -D DUMP_VHOSTS | grep 54.167.179.185`  
+<!-- `sudo apache2ctl -t -D DUMP_VHOSTS | grep 54.235.8.226`   -->
 `sudo apache2ctl -t -D DUMP_VHOSTS | grep .`  
 
 
