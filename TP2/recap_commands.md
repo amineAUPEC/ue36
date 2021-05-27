@@ -97,8 +97,8 @@ sudo chmod -R 755 /var/www/your_domain
 
 - sans domaine avec certificat autosignée
 ```bash
-`sudo -i`
-`sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt` << EOF
+sudo -i
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt << EOF
 FR
 Paris
 Paris
@@ -107,7 +107,7 @@ AugustinCorp
 54.235.8.226 
 zemail@u-pec.fr
 EOF
-`exit`
+exit
 ```
 - installation d'own cloud
 `curl https://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`
