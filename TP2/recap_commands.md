@@ -20,7 +20,7 @@
 
 `adduser etudiant`  
 `usermod -aG sudo etudiant`  
-
+- *optionnel or in AWS EC2 FIREWALL INTERFACE BEGIN*
 `ufw app list`
 
 
@@ -32,6 +32,11 @@ ufw status
 ssh etudiant@$IP
 ```
 
+- *optionnel or in AWS EC2 FIREWALL INTERFACE END*
+
+`sudo rsync --archive --chown=etudiant:etudiant ~/.ssh /home/etudiant`
+
+`ssh -i ssh-web.pem etudiant@$IP`
 
 - installer apache
 
@@ -77,7 +82,24 @@ sudo chown -R $USER:$USER /var/www/your_domain
 
 sudo chmod -R 755 /var/www/your_domain
 ```
+- sans domaine avec certificat autosignée
+- installation d'own cloud
+`curl https://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`
 
+`echo 'deb http://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/owncloud.list`
+
+
+```bash
+sudo apt update
+sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-xml php-zip owncloud-files -y
+```
+
+
+
+`sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP`
+
+
+`sudo nano /etc/apache2/sites-enabled/server_domain_or_IP.conf`
 
 ................................
 
