@@ -231,12 +231,19 @@ kill privileges
 
 - Création du serveur git :
 [create git serv](http://www.qanuq.com/2017/10/10/creer-serveur-git/)  
+
+
+- 1ère solution : Cloner le projet
 `git init --bare /home/etudiant/monprojet.git` 
 - copier la clé pem dans cd /home/etudiant/.ssh/ && chmod 600 *.pem
 `git clone etudiant@172.31.21.116:/home/etudiant/monprojet.git`
-`GIT_SSH_COMMAND='ssh -i /home/etudiant/.ssh/*.pem -o IdentitiesOnly=yes' git clone etudiant@172.31.21.116:/home/etudiant/monprojet.git`
+`GIT_SSH_COMMAND='sudo ssh -i /home/etudiant/.ssh/*.pem -o IdentitiesOnly=yes' git clone etudiant@172.31.21.116:/home/etudiant/monprojet.git`
 
 `cd monprojet/`  
+
+
+
+- 2ème solution : Lier le projet
 `cd projet/`
 ###### Initialisation du dépôt local dans le dossier courant
 `git init`
@@ -252,17 +259,27 @@ kill privileges
 
 ###### Push vers le dépôt distant
 `git push --set-upstream origin master`
+
+
+- End 2ème solution 
+
+
+
+
 ###### À ne faire qu'une seule fois
 `sudo bash -c "echo $(which git-shell) >> /etc/shells"`
+# À faire pour chaque utilisateur à restreindre
 `sudo chsh --shell $(which git-shell) etudiant`
+
+
 ###### Création du groupe gitusers
-`groupadd gitusers`
+`sudo groupadd gitusers`
 
 
 ######  user pouvant accéder au dépôt  
-`usermod -a -G gitusers etudiant`  
-`usermod -a -G gitusers paul`  
-`usermod -a -G gitusers jacques`  
+`sudo usermod -a -G gitusers etudiant`  
+`sudo usermod -a -G gitusers ubuntu`  
+<!-- `sudo usermod -a -G gitusers jacques`   -->
 
 
 
@@ -281,6 +298,7 @@ kill privileges
 ###### on initialise un dépôt --bare en précisant qu'on le partage via le groupe
 `sudo git init --bare --shared=group /git/monprojet.git`
 
+`GIT_SSH_COMMAND='sudo ssh -i /home/etudiant/.ssh/*.pem -o IdentitiesOnly=yes' git clone etudiant@172.31.21.116:/home/etudiant/monprojet.git`
 
 
 
