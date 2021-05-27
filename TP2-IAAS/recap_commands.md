@@ -312,14 +312,34 @@ kill privileges
 `sudo pip3 install awscli`
 
 
-- configurer la connexion au compte aws :
+- Configurer la connexion au compte AWS :
+    - Copy and paste the following into `nano ~/.aws/credentials`
+    - Overwrite this file `~/.aws/config` with this   
+        ```bash
+        sudo cat > ~/.aws/config << EOF
+        # Datacenter de Virginie
+        region=us-east-1
+        EOF
+        ```
+        
+
 - Consulter la documentation d'Amazon :  
 [docsaws](https://docs.aws.amazon.com/fr_fr/cli/latest/userguide/cli-services-ec2-instances.html)  
 
+```bash
+aws ec2 create-launch-template \
+    --launch-template-name TemplateForWebServer \
+    --version-description WebVersion1 \
+    --tag-specifications 'ResourceType=launch-template,Tags=[{Key=purpose,Value=production}]' \
+    --launch-template-data file://template-data.json
+```
+
 - Commandes aws ec2 usuelles :
-    - `run-instances`
-    - `terminate-instances`
-    - `describe-instances`
+    - `run-instances` *lancer*  
+    - `create-instance` *créer*  
+    - `create-launch-template` *créer un modèle*  
+    - `terminate-instances` *résilier*  
+    - `describe-instances` *lister*  
     
 - Configuration du firewall AWS en CLI :
 
@@ -351,10 +371,12 @@ son contenu :
     {
         "type": "amazon-ebs",
         "region": "us-east-1",
-        "source_ami": "ami-fce3c696",
+        // "source_ami": "ami-fce3c696",
+        "source_ami": "ami-0747bdcabd34c712a",
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
-        "ami_name": "Ta meilleure AMI",
+        // "ami_name": "Ta meilleure AMI",
+        "ami_name": "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20210415",
         "access_key": "AKIAIOSFODNN7EXAMPLE",
         "secret_key": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 
