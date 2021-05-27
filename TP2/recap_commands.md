@@ -63,13 +63,15 @@ SELECT user,authentication_string,plugin,host FROM mysql.user;
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password*1A';
 SELECT user,authentication_string,plugin,host FROM mysql.user;
 exit
-sudo apt install php libapache2-mod-php php-mysql
+sudo apt install php libapache2-mod-php php-mysql -y
 
+sudo -i
 sudo cat > /etc/apache2/mods-enabled/dir.conf << EOF
 <IfModule mod_dir.c>
     DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>
 EOF
+exit
 
 sudo systemctl restart apache2
 sudo systemctl status apache2
@@ -94,6 +96,19 @@ sudo chmod -R 755 /var/www/your_domain
 ```
 
 - sans domaine avec certificat autosignée
+```bash
+`sudo -i`
+`sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt` << EOF
+FR
+Paris
+Paris
+AugustinCorp Inc
+AugustinCorp
+54.235.8.226 
+zemail@u-pec.fr
+EOF
+`exit`
+```
 - installation d'own cloud
 `curl https://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`
 `curl https://attic.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`
