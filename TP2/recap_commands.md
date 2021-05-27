@@ -18,8 +18,8 @@
 - créer user avec sudo
 - activer le firewall
 
-`adduser etudiant`  
-`usermod -aG sudo etudiant`  
+`sudo adduser etudiant`  
+`sudo usermod -aG sudo etudiant`  
 - *optionnel or in AWS EC2 FIREWALL INTERFACE BEGIN*
 `ufw app list`
 
@@ -41,11 +41,13 @@ ssh etudiant@$IP
 - installer apache
 
 ```bash
-sudo apt update
-sudo apt install apache2
+sudo apt update -y
+sudo apt install apache2 -y
+# - *optionnel or in AWS EC2 FIREWALL INTERFACE BEGIN*
 sudo ufw app list
 sudo ufw app info "Apache Full"
 sudo ufw allow in "Apache Full"
+# - *optionnel or in AWS EC2 FIREWALL INTERFACE END*
 ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
 ```
 *OR :*
@@ -74,23 +76,31 @@ apt search php- | less
 apt show package_name
 
 apt show php-cli
-sudo apt install php-cli
+`sudo apt install php-cli -y`
+
+# *optionnel BEGIN*
 
 sudo mkdir /var/www/your_domain
 
 sudo chown -R $USER:$USER /var/www/your_domain
 
 sudo chmod -R 755 /var/www/your_domain
+# *optionnel  END*
+# *optionnel BEGIN*
+# *optionnel END*
+
 ```
+
 - sans domaine avec certificat autosignée
 - installation d'own cloud
 `curl https://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`
+`curl https://attic.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`
 
 `echo 'deb http://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/owncloud.list`
 
 
 ```bash
-sudo apt update
+sudo apt update -y
 sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-xml php-zip owncloud-files -y
 ```
 
@@ -99,7 +109,26 @@ sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-x
 `sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP`
 
 
-`sudo nano /etc/apache2/sites-enabled/server_domain_or_IP.conf`
+<!-- `sudo nano /etc/apache2/sites-enabled/server_domain_or_IP.conf` -->
+`sudo nano /etc/apache2/sites-available/000-default.conf`
+`sudo nano /etc/apache2/sites-available/default-ssl.conf`
+
+<!-- `sudo nano /etc/apache2/sites-enabled/000-default.conf`
+`sudo nano /etc/apache2/sites-enabled/ssl.conf` -->
+
+`sudo apache2ctl configtest`
+
+`sudo systemctl reload apache2`
+
+
+`sudo mysql -p`
+
+`CREATE DATABASE owncloud;`
+
+`GRANT ALL ON owncloud.* to 'owncloud'@'localhost' IDENTIFIED BY 'owncloud_database_password';`
+kill privileges
+`exit`
+
 
 ................................
 
