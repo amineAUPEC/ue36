@@ -164,8 +164,9 @@ exit
 `sudo nano /etc/apache2/sites-available/000-default.conf` 
 >
     Redirect permanent "/" "https://your_domain_or_IP/"
+    Redirect permanent "/" "https://54.235.8.226/"
 
-
+54.235.8.226
 ```bash
 sudo a2enmod ssl
 sudo a2enmod headers
@@ -183,8 +184,8 @@ sudo systemctl restart apache2
 
 
 - installation d'own cloud
-`curl https://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`
-`curl https://attic.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`
+`curl https://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`  
+`curl https://attic.owncloud.org/download/repositories/10.0/Ubuntu_18.04/Release.key | sudo apt-key add -`  
 
 `echo 'deb http://download.owncloud.org/download/repositories/10.0/Ubuntu_18.04/ /' | sudo tee /etc/apt/sources.list.d/owncloud.list`
 
@@ -197,6 +198,7 @@ sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-x
 
 
 `sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP`
+`sudo apache2ctl -t -D DUMP_VHOSTS | grep 54.235.8.226`
 
 
 <!-- `sudo nano /etc/apache2/sites-enabled/server_domain_or_IP.conf` -->
