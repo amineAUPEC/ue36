@@ -55,11 +55,12 @@ ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
 ```bash
 sudo apt install curl
 curl http://icanhazip.com
-sudo apt install mysql-server
-sudo mysql_secure_installation <<< "y"
+sudo apt install mysql-server -y
+sudo mysql_secure_installation 
+# <<< "y"
 sudo mysql
 SELECT user,authentication_string,plugin,host FROM mysql.user;
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password*1A';
 SELECT user,authentication_string,plugin,host FROM mysql.user;
 exit
 sudo apt install php libapache2-mod-php php-mysql
