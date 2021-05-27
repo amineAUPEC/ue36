@@ -36,6 +36,7 @@ ssh etudiant@$IP
 
 `sudo rsync --archive --chown=etudiant:etudiant ~/.ssh /home/etudiant`
 
+`su etudiant`
 `ssh -i ssh-web.pem etudiant@$IP`
 
 - installer apache
