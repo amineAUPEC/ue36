@@ -61,6 +61,7 @@ sudo mysql_secure_installation
 sudo mysql
 SELECT user,authentication_string,plugin,host FROM mysql.user;
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password*1A';
+# kill privileges
 SELECT user,authentication_string,plugin,host FROM mysql.user;
 exit
 sudo apt install php libapache2-mod-php php-mysql -y
@@ -199,6 +200,7 @@ sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-x
 
 `sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP`  
 `sudo apache2ctl -t -D DUMP_VHOSTS | grep 54.235.8.226`  
+`sudo apache2ctl -t -D DUMP_VHOSTS | grep .`  
 
 
 <!-- `sudo nano /etc/apache2/sites-enabled/server_domain_or_IP.conf` -->
@@ -217,7 +219,7 @@ sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-x
 
 `CREATE DATABASE owncloud;`  
 
-`GRANT ALL ON owncloud.* to 'owncloud'@'localhost' IDENTIFIED BY 'owncloud_database_password';`  
+`GRANT ALL ON owncloud.* to 'owncloud'@'localhost' IDENTIFIED BY 'owncloud_database_password*1A';`  
 kill privileges
 `exit`
 
