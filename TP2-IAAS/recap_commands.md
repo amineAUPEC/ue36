@@ -323,11 +323,18 @@ kill privileges
         region=us-east-1
         EOF
         ```
-    - verify :
+    - verify :   
     ```bash
     sudo cat ~/.aws/credentials    
     sudo cat ~/.aws/config
+
     ```
+    - if not working :  
+    ```bash
+    sudo rm -f ~/.aws/config
+        sudo aws configure
+    ```
+
 
 - Consulter la documentation d'Amazon :  
 [docsaws](https://docs.aws.amazon.com/fr_fr/cli/latest/userguide/cli-services-ec2-instances.html)  
