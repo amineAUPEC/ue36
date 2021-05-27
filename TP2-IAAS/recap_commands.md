@@ -232,8 +232,9 @@ kill privileges
 - Création du serveur git :
 [create git serv](http://www.qanuq.com/2017/10/10/creer-serveur-git/)  
 `git init --bare /home/etudiant/monprojet.git` 
-
+- copier la clé pem dans cd /home/etudiant/.ssh/ && chmod 600 *.pem
 `git clone etudiant@172.31.21.116:/home/etudiant/monprojet.git`
+`GIT_SSH_COMMAND='ssh -i /home/etudiant/.ssh/*.pem -o IdentitiesOnly=yes' git clone etudiant@172.31.21.116:/home/etudiant/monprojet.git`
 
 `cd monprojet/`  
 `cd projet/`
