@@ -197,27 +197,27 @@ sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-x
 
 
 
-`sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP`
-`sudo apache2ctl -t -D DUMP_VHOSTS | grep 54.235.8.226`
+`sudo apache2ctl -t -D DUMP_VHOSTS | grep server_domain_or_IP`  
+`sudo apache2ctl -t -D DUMP_VHOSTS | grep 54.235.8.226`  
 
 
 <!-- `sudo nano /etc/apache2/sites-enabled/server_domain_or_IP.conf` -->
-`sudo nano /etc/apache2/sites-available/000-default.conf`
-`sudo nano /etc/apache2/sites-available/default-ssl.conf`
+`sudo nano /etc/apache2/sites-available/000-default.conf`  
+`sudo nano /etc/apache2/sites-available/default-ssl.conf`  
 
-<!-- `sudo nano /etc/apache2/sites-enabled/000-default.conf`
-`sudo nano /etc/apache2/sites-enabled/ssl.conf` -->
+<!-- `sudo nano /etc/apache2/sites-enabled/000-default.conf`  
+`sudo nano /etc/apache2/sites-enabled/ssl.conf` -->  
 
-`sudo apache2ctl configtest`
+`sudo apache2ctl configtest`  
 
-`sudo systemctl reload apache2`
+`sudo systemctl reload apache2`  
 
 
-`sudo mysql -p`
+`sudo mysql -p`  
 
-`CREATE DATABASE owncloud;`
+`CREATE DATABASE owncloud;`  
 
-`GRANT ALL ON owncloud.* to 'owncloud'@'localhost' IDENTIFIED BY 'owncloud_database_password';`
+`GRANT ALL ON owncloud.* to 'owncloud'@'localhost' IDENTIFIED BY 'owncloud_database_password';`  
 kill privileges
 `exit`
 
