@@ -307,9 +307,9 @@ kill privileges
 
 
 - Installer CLI AWS :
-`sudo apt-get update -y && apt-get install python3 python python3-pip`  
-`sudo pip install awscli`
-`sudo pip3 install awscli`
+`sudo apt-get update -y && apt-get install python3 python python3-pip`    
+`sudo pip install awscli`  
+`sudo pip3 install awscli`  
 
 
 - Configurer la connexion au compte AWS :
@@ -355,7 +355,15 @@ aws ec2 describe-instance-attribute \
 # de l'instance, depuis n'importe où. 
 aws ec2 authorize-security-group-ingress \
 --group-id $SG_ID \
---protocol tcp --port 4242 --cidr 0.0.0.0/0
+--protocol tcp --port 22 --cidr 0.0.0.0/0
+
+aws ec2 authorize-security-group-ingress \
+--group-id $SG_ID \
+--protocol tcp --port 80 --cidr 0.0.0.0/0
+
+aws ec2 authorize-security-group-ingress \
+--group-id $SG_ID \
+--protocol tcp --port 443 --cidr 0.0.0.0/0
 ```
 
 Voir l'historique des commandes depuis l'interface aws et exécuté les commandes ou alors history puis exécuter les commandes
