@@ -371,11 +371,9 @@ son contenu :
     {
         "type": "amazon-ebs",
         "region": "us-east-1",
-        // "source_ami": "ami-fce3c696",
         "source_ami": "ami-0747bdcabd34c712a",
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
-        // "ami_name": "Ta meilleure AMI",
         "ami_name": "ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20210415",
         "access_key": "AKIAIOSFODNN7EXAMPLE",
         "secret_key": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
@@ -384,4 +382,10 @@ son contenu :
     ]
 }
 ```
+```bash
+
+#  "source_ami": "ami-fce3c696",
+# "ami_name": "Ta meilleure AMI",
+```        
+
 ## synth3 fin :
