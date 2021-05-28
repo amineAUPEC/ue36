@@ -14,10 +14,32 @@ labynocle
 7. trouver la commande git affichant les modifications de votre commit
 8. trouver la commande git affichant la liste des fichiers modifiés d’un commit
 9. trouver la commande git listant l’historique des commits modifiant un fichier
-10. trouver la commande git affichant les 8 derniers commits sur le format: 
+10. trouver la commande git affichant les 8 derniers commits sur le format:   
 `commitID date commiterName commitMessage`
 
-
+1. trouver la commande git permettant de configurer votre nom et votre mail
+- La commande git permettant de configurer notre nom et notre adresse mail est  :  
+`git config --global user.name "Amine XXXX"`  
+`git config --global user.email "amine@u-pec.fr"`
+1. savez vous où retrouver ces informations sur votre ordinateur ?
+- Les informations sont dans :
+    - `~/.gitconfig`
+1. créer un commit modifiant la recette des vegan cookie (changer la quantité de chocolat)
+- 
+1. créer un commit effacant la recette coco_rocks
+- 
+1. créer un commit renommant banana_chocolate_cake en banana_cake
+- 
+1. créer un commit qui annule le commit effacant la recette coco_rocks
+- 
+1. trouver la commande git affichant les modifications de votre commit
+- 
+1. trouver la commande git affichant la liste des fichiers modifiés d’un commit
+- 
+1. trouver la commande git listant l’historique des commits modifiant un fichier
+- 
+1. trouver la commande git affichant les 8 derniers commits sur le format: 
+- 
 
 
 11. trouver la commande git affichant uniquement vos commits
