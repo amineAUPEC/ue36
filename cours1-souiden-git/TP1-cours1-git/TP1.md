@@ -9,7 +9,7 @@ labynocle
 1. trouver la commande  :
 `git clone git@github.com:amineAUPEC/recipes.git`
 
-1. trouver la commande git permettant de configurer votre nom et votre mail
+<!-- 1. trouver la commande git permettant de configurer votre nom et votre mail
 2. savez vous où retrouver ces informations sur votre ordinateur ?
 3. créer un commit modifiant la recette des vegan cookie (changer la quantité de chocolat)
 4. créer un commit effacant la recette coco_rocks
@@ -18,8 +18,8 @@ labynocle
 7. trouver la commande git affichant les modifications de votre commit
 8. trouver la commande git affichant la liste des fichiers modifiés d’un commit
 9. trouver la commande git listant l’historique des commits modifiant un fichier
-10. trouver la commande git affichant les 8 derniers commits sur le format:   
-`commitID date commiterName commitMessage`
+10. trouver la commande git affichant les 8 derniers commits sur le format:    -->
+<!-- `commitID date commiterName commitMessage` -->
 
 1. trouver la commande git permettant de configurer votre nom et votre mail
 - La commande git permettant de configurer notre nom et notre adresse mail est  :  
@@ -64,7 +64,7 @@ labynocle
     - `git add . && git commit --amend -m "minor_modifofminor_modif" && git push`
 13. afficher à nouveau les git logs et regardez les commit ID, que constatez vous et que comprennez vous ?
 - `git log`  
--  on remarque que les hash servent de commitID et qu'ils sont nouveaux
+-  on remarque que les hash servent de commitID et qu'ils sont nouveaux, c'est des identidiants uniques (uid)
 14. y a t’il une commande pour afficher qui a écrit chaque ligne d’un fichier?
 - `git blame $filename`
 15. créer:
@@ -75,17 +75,17 @@ labynocle
 15. C. un commit qui modifie la recette de cheese_naans (quantite feta)
     - `git add . && git commit -m changequantity_cheese_naans_feta `
 15. D. trouver les commandes vous permettant de merger ces 3 derniers commits en un seul
-    - 
+    - `git rebase -i HEAD~3 && git push --force origin HEAD `
 15. **A Ce Stade Vous Avez Les Bases Pour Manipuler Git Localement**
 
-1. trouver la commande pour push vos modifications sur github
-1. changer le commit message du dernier commit et repousser vos modifications
+16. trouver la commande pour push vos modifications sur github
+17. changer le commit message du dernier commit et repousser vos modifications
     - que se passe t’il ? pourquoi ?
     - comment contourner le problème ?
         - voyez vous le danger derrière cette opération ?
-1. directement via l’interface Github, modifiez un fichier et créez un commit
+18. directement via l’interface Github, modifiez un fichier et créez un commit
     - trouver la commande pour récupérer dans votre clone locale les modifications que vous avez fait sur Github    
-1. trouver les commandes git pour créer une branche: recipe/carrot_cake
+19. trouver les commandes git pour créer une branche: recipe/carrot_cake
     - créer un commit en ajoutant une recette de carrot cake
     - trouvez la commande pour pousser votre branche sur github
     - créer une pull request sur Github, pour que le commit que vous avez fait se retrouve sur votre branche principale (master)
