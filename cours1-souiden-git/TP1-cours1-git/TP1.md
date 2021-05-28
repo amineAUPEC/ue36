@@ -59,7 +59,8 @@ labynocle
 11. trouver la commande git affichant uniquement vos commits
 - `git log --author=amineAUPEC `
 12. trouver la commande git pour renommer le commit message de votre dernier commit
-- 
+- `git commit --amend -m "$New commit message."` *OR*
+- `git add. && git commit --amend -m "$New commit message."`
 13. afficher à nouveau les git logs et regardez les commit ID, que constatez vous et que comprennez vous ?
 - 
 14. y a t’il une commande pour afficher qui a écrit chaque ligne d’un fichier?
