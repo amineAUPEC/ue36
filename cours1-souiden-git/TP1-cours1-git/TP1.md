@@ -59,19 +59,21 @@ labynocle
 11. trouver la commande git affichant uniquement vos commits
 - `git log --author=amineAUPEC `
 12. trouver la commande git pour renommer le commit message de votre dernier commit
-- `git commit --amend -m "$New commit message."` *OR*
-- `git add. && git commit --amend -m "$New commit message."`
+- `git commit --amend -m "$New commit message." && git push` 
+- S'il y a des modifs :
+    - `git add . && git commit --amend -m "minor_modifofminor_modif" && git push`
 13. afficher à nouveau les git logs et regardez les commit ID, que constatez vous et que comprennez vous ?
-- 
+- `git log`  
+-  on remarque que les hash servent de commitID et qu'ils sont nouveaux
 14. y a t’il une commande pour afficher qui a écrit chaque ligne d’un fichier?
-- 
+- `git blame $filename`
 15. créer:
 15. A. un commit qui modifie la recette de cheese_naans (quantite d’oeuf)
-    - 
+    - `git add . && git commit -m changequantity_cheese_naans_eggs `
 15. B. un commit qui modifie la recette de cheese_naans (quantite de farine)
-    - 
+    - `git add . && git commit -m changequantity_cheese_naans_flour `
 15. C. un commit qui modifie la recette de cheese_naans (quantite feta)
-    - 
+    - `git add . && git commit -m changequantity_cheese_naans_feta `
 15. D. trouver les commandes vous permettant de merger ces 3 derniers commits en un seul
     - 
 15. **A Ce Stade Vous Avez Les Bases Pour Manipuler Git Localement**
