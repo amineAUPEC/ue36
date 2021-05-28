@@ -25,25 +25,25 @@ labynocle
 - La commande git permettant de configurer notre nom et notre adresse mail est  :  
 `git config --global user.name "Amine XXXX"`  
 `git config --global user.email "amine@u-pec.fr"`
-1. savez vous où retrouver ces informations sur votre ordinateur ?
+2. savez vous où retrouver ces informations sur votre ordinateur ?
 - Les informations sont dans :
     - `~/.gitconfig`
-1. créer un commit modifiant la recette des vegan cookie (changer la quantité de chocolat)
+3. créer un commit modifiant la recette des vegan cookie (changer la quantité de chocolat)
 - `git add . && git commit -m changequantity_vegancookies && git push`
-1. créer un commit effacant la recette coco_rocks
+4. créer un commit effacant la recette coco_rocks
 - `cd recipes/coco_rocks/ && git rm README.md && git commit -m delete_coco_rocks && git push`
 
-1. créer un commit renommant banana_chocolate_cake en banana_cake
+5. créer un commit renommant banana_chocolate_cake en banana_cake
 - `git mv banana_chocolate_cake banana_cake && git commit -m rename_banana_chocolate_cake && git push`
-1. créer un commit qui annule le commit effacant la recette coco_rocks
+6. créer un commit qui annule le commit effacant la recette coco_rocks
+- `git revert 9cc85d8a700e3a33e4a11baf4db679e695b91cba && git push`
+7. trouver la commande git affichant les modifications de votre commit
 - 
-1. trouver la commande git affichant les modifications de votre commit
+8. trouver la commande git affichant la liste des fichiers modifiés d’un commit
 - 
-1. trouver la commande git affichant la liste des fichiers modifiés d’un commit
+9. trouver la commande git listant l’historique des commits modifiant un fichier
 - 
-1. trouver la commande git listant l’historique des commits modifiant un fichier
-- 
-1. trouver la commande git affichant les 8 derniers commits sur le format: 
+10. trouver la commande git affichant les 8 derniers commits sur le format: 
 - 
 
 
