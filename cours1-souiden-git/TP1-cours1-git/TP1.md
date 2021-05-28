@@ -38,15 +38,22 @@ labynocle
 6. créer un commit qui annule le commit effacant la recette coco_rocks
 - `git revert 9cc85d8a700e3a33e4a11baf4db679e695b91cba && git push`
 7. trouver la commande git affichant les modifications de votre commit
-- 
+- `git diff --stat --cached origin/master`
+- `git diff --cached origin/master`****
 8. trouver la commande git affichant la liste des fichiers modifiés d’un commit
-- 
+- `git show $9cc85d8a700e3a33e4a11baf4db679e695b91cba`
+<!-- - `git show --stat $9cc85d8a700e3a33e4a11baf4db679e695b91cba` -->
 9. trouver la commande git listant l’historique des commits modifiant un fichier
-- 
+<!-- - `git log`**** -->
+- `git log --stat | grep $path$name_of_file`
+- `git log -p $name_of_file` **
 10. trouver la commande git affichant les 8 derniers commits sur le format: 
-- 
+- `git log -p -8` ****
+- `git log -8 --oneline` ****
+- `git log -8 --oneline --pretty="%cn committed %h on %cd"` ****
+- ``
 
-
+<!-- - `git log --oneline` -->
 11. trouver la commande git affichant uniquement vos commits
 12. trouver la commande git pour renommer le commit message de votre dernier commit
 13. afficher à nouveau les git logs et regardez les commit ID, que constatez vous et que comprennez vous ?
