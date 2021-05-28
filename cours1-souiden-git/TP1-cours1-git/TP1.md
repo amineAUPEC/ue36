@@ -5,6 +5,10 @@ labynocle
 *Notes :cloner en ssh (recommandé)*
 
 
+
+1. trouver la commande  :
+`git clone git@github.com:amineAUPEC/recipes.git`
+
 1. trouver la commande git permettant de configurer votre nom et votre mail
 2. savez vous où retrouver ces informations sur votre ordinateur ?
 3. créer un commit modifiant la recette des vegan cookie (changer la quantité de chocolat)
