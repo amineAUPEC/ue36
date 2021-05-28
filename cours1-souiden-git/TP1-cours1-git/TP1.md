@@ -29,9 +29,12 @@ labynocle
 - Les informations sont dans :
     - `~/.gitconfig`
 1. créer un commit modifiant la recette des vegan cookie (changer la quantité de chocolat)
-- 
+- `git add . && git commit -m changequantity_vegancookies && git push`
 1. créer un commit effacant la recette coco_rocks
-- 
+- `cd recipes/coco_rocks/ && git rm README.md && git commit -m delete_coco_rocks && git push`
+
+
+
 1. créer un commit renommant banana_chocolate_cake en banana_cake
 - 
 1. créer un commit qui annule le commit effacant la recette coco_rocks
