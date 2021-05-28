@@ -9,17 +9,7 @@ labynocle
 1. trouver la commande  :
 `git clone git@github.com:amineAUPEC/recipes.git`
 
-<!-- 1. trouver la commande git permettant de configurer votre nom et votre mail
-2. savez vous où retrouver ces informations sur votre ordinateur ?
-3. créer un commit modifiant la recette des vegan cookie (changer la quantité de chocolat)
-4. créer un commit effacant la recette coco_rocks
-5. créer un commit renommant banana_chocolate_cake en banana_cake
-6. créer un commit qui annule le commit effacant la recette coco_rocks
-7. trouver la commande git affichant les modifications de votre commit
-8. trouver la commande git affichant la liste des fichiers modifiés d’un commit
-9. trouver la commande git listant l’historique des commits modifiant un fichier
-10. trouver la commande git affichant les 8 derniers commits sur le format:    -->
-<!-- `commitID date commiterName commitMessage` -->
+
 
 1. trouver la commande git permettant de configurer votre nom et votre mail
 - La commande git permettant de configurer notre nom et notre adresse mail est  :  
@@ -28,34 +18,34 @@ labynocle
 2. savez vous où retrouver ces informations sur votre ordinateur ?
 - Les informations sont dans :
     - `~/.gitconfig` 
+:::image type="content" source="images/gitconfig.png" alt-text="gitconfig":::
+
 3. créer un commit modifiant la recette des vegan cookie (changer la quantité de chocolat)
 - `git add . && git commit -m changequantity_vegancookies && git push`
+:::image type="content" source="images/vegancookie.png" alt-text="vegancookie":::
+
 4. créer un commit effacant la recette coco_rocks
 - `cd recipes/coco_rocks/ && git rm README.md && git commit -m delete_coco_rocks && git push`
+:::image type="complex" source="images/delete_coco_rocks.png" alt-text="delete_coco_rocks":::
 
+:::image-end:::
+:::image type="content" source="" alt-text="":::
 5. créer un commit renommant banana_chocolate_cake en banana_cake
 - `git mv banana_chocolate_cake banana_cake && git commit -m rename_banana_chocolate_cake && git push`
+:::image type="content" source="images/rename_banana_chocolate_cake.png" alt-text="banana":::
 6. créer un commit qui annule le commit effacant la recette coco_rocks
 - `git revert 9cc85d8a700e3a33e4a11baf4db679e695b91cba && git push`
-7. trouver la commande git affichant les modifications de votre commit
-<!-- - `git diff --stat --cached origin/master`
-- `git diff --cached origin/master`**** -->
+:::image type="content" source="images/gitrevert.png" alt-text="revert":::
+1. trouver la commande git affichant les modifications de votre commit
 - `git show`
-8. trouver la commande git affichant la liste des fichiers modifiés d’un commit
+:::image type="content" source="images/gitshow.png" alt-text="gitshow":::
+1. trouver la commande git affichant la liste des fichiers modifiés d’un commit
 - `git show --name-only $9cc85d8a700e3a33e4a11baf4db679e695b91cba`
-<!-- - `git show --stat $9cc85d8a700e3a33e4a11baf4db679e695b91cba` -->
-9. trouver la commande git listant l’historique des commits modifiant un fichier
-<!-- - `git log`**** -->
-<!-- - `git log --stat | grep $path$name_of_file`
-- `git log -p $name_of_file` ** -->
+1. trouver la commande git listant l’historique des commits modifiant un fichier
 - `git log $name_of_file`
-<!-- - `git log -S"raw_scan"` -->
-10. trouver la commande git affichant les 8 derniers commits sur le format: 
-<!-- - `git log -p -8` **** -->
-<!-- - `git log -8 --oneline` **** -->
+1. trouver la commande git affichant les 8 derniers commits sur le format: 
 - `git log -8 --oneline --pretty=" %h is the id | the date is %cd | committed %h | message %s"` 
 
-<!-- - `git log --oneline` -->
 11. trouver la commande git affichant uniquement vos commits
 - `git log --author=amineAUPEC `
 12. trouver la commande git pour renommer le commit message de votre dernier commit
@@ -63,8 +53,8 @@ labynocle
 - S'il y a des modifs :
     - `git add . && git commit --amend -m "minor_modifofminor_modif" && git push`
 13. afficher à nouveau les git logs et regardez les commit ID, que constatez vous et que comprennez vous ?
-- `git log`  
--  on remarque que les hash servent de commitID et qu'ils sont nouveaux, c'est des identidiants uniques (uid)
+    - `git log`  
+    -  on remarque que les hash servent de commitID et qu'ils sont nouveaux, c'est des identidiants uniques (uid)
 14. y a t’il une commande pour afficher qui a écrit chaque ligne d’un fichier?
 - `git blame $filename`
 15. créer:
