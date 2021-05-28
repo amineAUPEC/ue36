@@ -33,10 +33,8 @@ labynocle
 1. créer un commit effacant la recette coco_rocks
 - `cd recipes/coco_rocks/ && git rm README.md && git commit -m delete_coco_rocks && git push`
 
-
-
 1. créer un commit renommant banana_chocolate_cake en banana_cake
-- 
+- `git mv banana_chocolate_cake banana_cake && git commit -m rename_banana_chocolate_cake && git push`
 1. créer un commit qui annule le commit effacant la recette coco_rocks
 - 
 1. trouver la commande git affichant les modifications de votre commit
