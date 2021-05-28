@@ -38,15 +38,17 @@ labynocle
 6. créer un commit qui annule le commit effacant la recette coco_rocks
 - `git revert 9cc85d8a700e3a33e4a11baf4db679e695b91cba && git push`
 7. trouver la commande git affichant les modifications de votre commit
-- `git diff --stat --cached origin/master`
-- `git diff --cached origin/master`****
+<!-- - `git diff --stat --cached origin/master`
+- `git diff --cached origin/master`**** -->
+- `git show`
 8. trouver la commande git affichant la liste des fichiers modifiés d’un commit
-- `git show $9cc85d8a700e3a33e4a11baf4db679e695b91cba`
+- `git show --name-only $9cc85d8a700e3a33e4a11baf4db679e695b91cba`
 <!-- - `git show --stat $9cc85d8a700e3a33e4a11baf4db679e695b91cba` -->
 9. trouver la commande git listant l’historique des commits modifiant un fichier
 <!-- - `git log`**** -->
-- `git log --stat | grep $path$name_of_file`
-- `git log -p $name_of_file` **
+<!-- - `git log --stat | grep $path$name_of_file`
+- `git log -p $name_of_file` ** -->
+- `git log $name_of_file`
 <!-- - `git log -S"raw_scan"` -->
 10. trouver la commande git affichant les 8 derniers commits sur le format: 
 <!-- - `git log -p -8` **** -->
