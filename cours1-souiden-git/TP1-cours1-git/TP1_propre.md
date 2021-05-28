@@ -18,30 +18,30 @@ labynocle
 2. savez vous où retrouver ces informations sur votre ordinateur ?
 - Les informations sont dans :
     - `~/.gitconfig` 
-:::image type="content" source="./images/gitconfig.png" alt-text="gitconfig":::
+:::image type="content" source="images/gitconfig.png" alt-text="gitconfig":::
 
 3. créer un commit modifiant la recette des vegan cookie (changer la quantité de chocolat)
 - `git add . && git commit -m changequantity_vegancookies && git push`
-:::image type="content" source="./images/vegancookie.png" alt-text="vegancookie":::
+:::image type="content" source="images/vegancookie.png" alt-text="vegancookie":::
 
 4. créer un commit effacant la recette coco_rocks
 - `cd recipes/coco_rocks/ && git rm README.md && git commit -m delete_coco_rocks && git push`
-:::image type="content" source="./images/delete_coco_rocks.png" alt-text="delete_coco_rocks":::
+:::image type="content" source="images/delete_coco_rocks.png" alt-text="delete_coco_rocks":::
 5. créer un commit renommant banana_chocolate_cake en banana_cake
 - `git mv banana_chocolate_cake banana_cake && git commit -m rename_banana_chocolate_cake && git push`
-:::image type="content" source="./images/rename_banana_chocolate_cake.png" alt-text="banana":::
+:::image type="content" source="images/rename_banana_chocolate_cake.png" alt-text="banana":::
 6. créer un commit qui annule le commit effacant la recette coco_rocks
 - `git revert 9cc85d8a700e3a33e4a11baf4db679e695b91cba && git push`
-:::image type="content" source="./images/gitrevert.png" alt-text="revert":::
+:::image type="content" source="images/gitrevert.png" alt-text="revert":::
 7. trouver la commande git affichant les modifications de votre commit
 - `git show`
-:::image type="content" source="./images/gitshow.png" alt-text="gitshow":::
+:::image type="content" source="images/gitshow.png" alt-text="gitshow":::
 8. trouver la commande git affichant la liste des fichiers modifiés d’un commit
 - `git show --name-only $9cc85d8a700e3a33e4a11baf4db679e695b91cba`
-:::image type="content" source="./images/gitshow_nameonly.png" alt-text="gitshow_nameonly":::
+:::image type="content" source="images/gitshow_nameonly.png" alt-text="gitshow_nameonly":::
 9. trouver la commande git listant l’historique des commits modifiant un fichier
 - `git log $name_of_file`
-:::image type="content" source="./images/gitlog_q9.png" alt-text="gitlog_file":::
+:::image type="content" source="images/gitlog_q9.png" alt-text="gitlog_file":::
 
 10. trouver la commande git affichant les 8 derniers commits sur le format: 
 - `git log -8 --oneline --pretty=" %h is the id | the date is %cd | committed %h | message %s"` 
