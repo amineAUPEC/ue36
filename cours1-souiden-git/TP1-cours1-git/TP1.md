@@ -47,11 +47,11 @@ labynocle
 <!-- - `git log`**** -->
 - `git log --stat | grep $path$name_of_file`
 - `git log -p $name_of_file` **
+<!-- - `git log -S"raw_scan"` -->
 10. trouver la commande git affichant les 8 derniers commits sur le format: 
-- `git log -p -8` ****
-- `git log -8 --oneline` ****
-- `git log -8 --oneline --pretty="%cn committed %h on %cd"` ****
-- ``
+<!-- - `git log -p -8` **** -->
+<!-- - `git log -8 --oneline` **** -->
+- `git log -8 --oneline --pretty=" %h is the id | the date is %cd | committed %h | message %s"` 
 
 <!-- - `git log --oneline` -->
 11. trouver la commande git affichant uniquement vos commits
