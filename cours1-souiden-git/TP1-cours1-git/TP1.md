@@ -57,14 +57,22 @@ labynocle
 
 <!-- - `git log --oneline` -->
 11. trouver la commande git affichant uniquement vos commits
+- `git log --author=amineAUPEC `
 12. trouver la commande git pour renommer le commit message de votre dernier commit
+- 
 13. afficher à nouveau les git logs et regardez les commit ID, que constatez vous et que comprennez vous ?
+- 
 14. y a t’il une commande pour afficher qui a écrit chaque ligne d’un fichier?
+- 
 15. créer:
 15. A. un commit qui modifie la recette de cheese_naans (quantite d’oeuf)
+    - 
 15. B. un commit qui modifie la recette de cheese_naans (quantite de farine)
+    - 
 15. C. un commit qui modifie la recette de cheese_naans (quantite feta)
+    - 
 15. D. trouver les commandes vous permettant de merger ces 3 derniers commits en un seul
+    - 
 15. **A Ce Stade Vous Avez Les Bases Pour Manipuler Git Localement**
 
 1. trouver la commande pour push vos modifications sur github
