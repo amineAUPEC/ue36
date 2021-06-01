@@ -105,7 +105,7 @@ git plog
 git checkout master
 
 
-git pull
+`git pull`
 
 
 rancid
