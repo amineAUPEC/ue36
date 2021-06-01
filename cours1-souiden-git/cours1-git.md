@@ -3,7 +3,7 @@ labynocle
 
 
 https://docs.google.com/presentation/d/1_AxRyA-BxaqacAH-OsVIUtdZ8oW4Dv9ZuoYDiHdlbL0/edit#slide=id.g6c71ba4736_0_3
-<p> ret</p>
+
 Usage de git :
 
 en quoi git est un scm particulier
