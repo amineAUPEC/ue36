@@ -15,11 +15,10 @@
 - digitalocean à configurer ou lancer le script du prof :
 [digitalocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-owncloud-on-ubuntu-18-04)
 
-- créer user avec sudo
-- activer le firewall
-
+- créer user avec sudo  
 `sudo adduser etudiant`  
 `sudo usermod -aG sudo etudiant`  
+- activer le firewall
 - *optionnel or in AWS EC2 FIREWALL INTERFACE BEGIN*
 `ufw app list`
 
@@ -307,9 +306,9 @@ kill privileges
 
 
 - Installer CLI AWS :
-`sudo apt-get update -y && sudo apt-get install python3 python python3-pip -y`    
+`sudo apt-get update -y && sudo apt-get install python3 python python3-pip -y`      
 <!-- `sudo pip install awscli`   -->
-`sudo pip3 install awscli`  
+`sudo pip3 install awscli`    
 
 
 - Configurer la connexion au compte AWS :
