@@ -120,4 +120,3 @@ git plogfull
 
 dnsmanager chez [gandi](https://www.gandi.net/fr) et avec jenkins avec une tâche CRON
 
-
